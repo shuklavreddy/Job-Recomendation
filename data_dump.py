@@ -16,7 +16,7 @@ if __name__=="__main__":
     print(f"Rows and columns: {df.shape}")
     # reseting the index
     df.reset_index(drop=True,inplace=True)
-    #Convert dataframe to json so that we can dump these record in mongo db
+   
     json_record = list(json.loads(df.T.to_json()).values())# this is the required format
     #print(json_record[0])
 
